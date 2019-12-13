@@ -1,0 +1,6 @@
+framework module Pods_ios_nfc_order {
+  umbrella header "Pods-ios-nfc-order-umbrella.h"
+
+  export *
+  module * { export * }
+}

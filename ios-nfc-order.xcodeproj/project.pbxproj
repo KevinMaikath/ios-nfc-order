@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D4922AAB8592AC32974FC8C /* Pods_ios_nfc_order.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2122CA65B8A4A38EF394E32 /* Pods_ios_nfc_order.framework */; };
+		FB72983F23A3FCFF00805B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72983E23A3FCFF00805B2B /* AppDelegate.swift */; };
+		FB72984123A3FCFF00805B2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72984023A3FCFF00805B2B /* SceneDelegate.swift */; };
+		FB72984623A3FCFF00805B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB72984423A3FCFF00805B2B /* Main.storyboard */; };
+		FB72984823A3FD0000805B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB72984723A3FD0000805B2B /* Assets.xcassets */; };
+		FB72984B23A3FD0000805B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB72984923A3FD0000805B2B /* LaunchScreen.storyboard */; };
+		FB72985623A3FD6900805B2B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72985523A3FD6900805B2B /* Category.swift */; };
+		FB72985823A3FEAD00805B2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB72985723A3FEAD00805B2B /* GoogleService-Info.plist */; };
+		FB72985A23A3FFB100805B2B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72985923A3FFB100805B2B /* Product.swift */; };
+		FB72985E23A4011F00805B2B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72985D23A4011F00805B2B /* Repository.swift */; };
+		FB72986023A4013600805B2B /* CatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72985F23A4013600805B2B /* CatalogModel.swift */; };
+		FB72986223A4022700805B2B /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72986123A4022700805B2B /* CatalogViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3FD4304492FCE605171CA0C8 /* Pods-ios-nfc-order.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-nfc-order.release.xcconfig"; path = "Target Support Files/Pods-ios-nfc-order/Pods-ios-nfc-order.release.xcconfig"; sourceTree = "<group>"; };
+		964A9BBBF7DD0515AB67B365 /* Pods-ios-nfc-order.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-nfc-order.debug.xcconfig"; path = "Target Support Files/Pods-ios-nfc-order/Pods-ios-nfc-order.debug.xcconfig"; sourceTree = "<group>"; };
+		D2122CA65B8A4A38EF394E32 /* Pods_ios_nfc_order.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_nfc_order.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB72983B23A3FCFF00805B2B /* ios-nfc-order.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-nfc-order.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB72983E23A3FCFF00805B2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB72984023A3FCFF00805B2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FB72984523A3FCFF00805B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB72984723A3FD0000805B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB72984A23A3FD0000805B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB72984C23A3FD0000805B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB72985523A3FD6900805B2B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FB72985723A3FEAD00805B2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB72985923A3FFB100805B2B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		FB72985D23A4011F00805B2B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		FB72985F23A4013600805B2B /* CatalogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModel.swift; sourceTree = "<group>"; };
+		FB72986123A4022700805B2B /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB72983823A3FCFF00805B2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D4922AAB8592AC32974FC8C /* Pods_ios_nfc_order.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F4589B60BD324036827E581 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				964A9BBBF7DD0515AB67B365 /* Pods-ios-nfc-order.debug.xcconfig */,
+				3FD4304492FCE605171CA0C8 /* Pods-ios-nfc-order.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E61CC1F830F3080F558BF7C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2122CA65B8A4A38EF394E32 /* Pods_ios_nfc_order.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB72983223A3FCFF00805B2B = {
+			isa = PBXGroup;
+			children = (
+				FB72983D23A3FCFF00805B2B /* ios-nfc-order */,
+				FB72983C23A3FCFF00805B2B /* Products */,
+				0F4589B60BD324036827E581 /* Pods */,
+				E61CC1F830F3080F558BF7C7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FB72983C23A3FCFF00805B2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB72983B23A3FCFF00805B2B /* ios-nfc-order.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB72983D23A3FCFF00805B2B /* ios-nfc-order */ = {
+			isa = PBXGroup;
+			children = (
+				FB72985723A3FEAD00805B2B /* GoogleService-Info.plist */,
+				FB72985423A3FD5100805B2B /* Data */,
+				FB72985323A3FD2200805B2B /* Models */,
+				FB72985223A3FD1500805B2B /* ViewControllers */,
+				FB72983E23A3FCFF00805B2B /* AppDelegate.swift */,
+				FB72984023A3FCFF00805B2B /* SceneDelegate.swift */,
+				FB72984423A3FCFF00805B2B /* Main.storyboard */,
+				FB72984723A3FD0000805B2B /* Assets.xcassets */,
+				FB72984923A3FD0000805B2B /* LaunchScreen.storyboard */,
+				FB72984C23A3FD0000805B2B /* Info.plist */,
+			);
+			path = "ios-nfc-order";
+			sourceTree = "<group>";
+		};
+		FB72985223A3FD1500805B2B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB72986123A4022700805B2B /* CatalogViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FB72985323A3FD2200805B2B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB72985F23A4013600805B2B /* CatalogModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB72985423A3FD5100805B2B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FB72985523A3FD6900805B2B /* Category.swift */,
+				FB72985923A3FFB100805B2B /* Product.swift */,
+				FB72985D23A4011F00805B2B /* Repository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB72983A23A3FCFF00805B2B /* ios-nfc-order */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB72984F23A3FD0000805B2B /* Build configuration list for PBXNativeTarget "ios-nfc-order" */;
+			buildPhases = (
+				E30B92186D063C862A0E9DF4 /* [CP] Check Pods Manifest.lock */,
+				FB72983723A3FCFF00805B2B /* Sources */,
+				FB72983823A3FCFF00805B2B /* Frameworks */,
+				FB72983923A3FCFF00805B2B /* Resources */,
+				92BEDEB89E5BE4240DEFBC16 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios-nfc-order";
+			productName = "ios-nfc-order";
+			productReference = FB72983B23A3FCFF00805B2B /* ios-nfc-order.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB72983323A3FCFF00805B2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = alumno;
+				TargetAttributes = {
+					FB72983A23A3FCFF00805B2B = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = FB72983623A3FCFF00805B2B /* Build configuration list for PBXProject "ios-nfc-order" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB72983223A3FCFF00805B2B;
+			productRefGroup = FB72983C23A3FCFF00805B2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB72983A23A3FCFF00805B2B /* ios-nfc-order */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB72983923A3FCFF00805B2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB72984B23A3FD0000805B2B /* LaunchScreen.storyboard in Resources */,
+				FB72985823A3FEAD00805B2B /* GoogleService-Info.plist in Resources */,
+				FB72984823A3FD0000805B2B /* Assets.xcassets in Resources */,
+				FB72984623A3FCFF00805B2B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92BEDEB89E5BE4240DEFBC16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-nfc-order/Pods-ios-nfc-order-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-nfc-order/Pods-ios-nfc-order-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-nfc-order/Pods-ios-nfc-order-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E30B92186D063C862A0E9DF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios-nfc-order-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB72983723A3FCFF00805B2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB72986223A4022700805B2B /* CatalogViewController.swift in Sources */,
+				FB72985E23A4011F00805B2B /* Repository.swift in Sources */,
+				FB72986023A4013600805B2B /* CatalogModel.swift in Sources */,
+				FB72983F23A3FCFF00805B2B /* AppDelegate.swift in Sources */,
+				FB72985A23A3FFB100805B2B /* Product.swift in Sources */,
+				FB72984123A3FCFF00805B2B /* SceneDelegate.swift in Sources */,
+				FB72985623A3FD6900805B2B /* Category.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB72984423A3FCFF00805B2B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB72984523A3FCFF00805B2B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB72984923A3FD0000805B2B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB72984A23A3FD0000805B2B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB72984D23A3FD0000805B2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB72984E23A3FD0000805B2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB72985023A3FD0000805B2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 964A9BBBF7DD0515AB67B365 /* Pods-ios-nfc-order.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "ios-nfc-order/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinrx25.ios-nfc-order";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB72985123A3FD0000805B2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FD4304492FCE605171CA0C8 /* Pods-ios-nfc-order.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "ios-nfc-order/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinrx25.ios-nfc-order";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB72983623A3FCFF00805B2B /* Build configuration list for PBXProject "ios-nfc-order" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB72984D23A3FD0000805B2B /* Debug */,
+				FB72984E23A3FD0000805B2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB72984F23A3FD0000805B2B /* Build configuration list for PBXNativeTarget "ios-nfc-order" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB72985023A3FD0000805B2B /* Debug */,
+				FB72985123A3FD0000805B2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB72983323A3FCFF00805B2B /* Project object */;
+}
