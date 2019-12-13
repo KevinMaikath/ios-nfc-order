@@ -40,6 +40,9 @@ class CatalogViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        model.loadCategories {
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source

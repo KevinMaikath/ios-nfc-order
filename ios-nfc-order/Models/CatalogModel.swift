@@ -11,15 +11,18 @@ import UIKit
 class CatalogModel {
     
     var categories: [Category]?
+    var repository: Repository?
     
     init() {
-        let category1 = Category(name: "Hamburgers", imgUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0b/RedDot_Burger.jpg")
-        let category2 = Category(name: "Supplements", imgUrl: "https://cms.splendidtable.org/sites/default/files/styles/w2000/public/french-fries.jpg")
-        self.categories = [category1, category2]
+        self.repository = Repository.getInstance()
+        self.categories = []
     }
 
-    func setCategories(categories: [Category]) {
-        self.categories = categories
+    func loadCategories(completion: @escaping (() -> Void)){
+        repository?.loadCategories(completion: { (loadedCategories) in
+            self.categories = loadedCategories
+            completion()
+        })
     }
     
     func getCategoriesCount() -> Int {
