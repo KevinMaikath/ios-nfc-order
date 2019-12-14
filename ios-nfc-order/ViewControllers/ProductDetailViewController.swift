@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class ProductDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -47,5 +48,6 @@ class ProductDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBAction func addButtonTapped(_ sender: UIButton) {
         self.shoppingCart?.addOneToCart(self.product!)
+        self.view.makeToast("\(self.product!.name ?? "") added to the cart!", duration: 1.0)
     }
 }

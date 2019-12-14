@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class ProductCell: UITableViewCell {
     
@@ -67,7 +68,9 @@ class CategoryViewController: UITableViewController {
     }
     
     func buttonTapped(_ indexPath: IndexPath) {
-        self.shoppingCart?.addOneToCart(model.productList![indexPath.row])
+        let product = model.productList![indexPath.row]
+        self.shoppingCart?.addOneToCart(product)
+        self.view.makeToast("\(product.name ?? "") added to the cart!", duration: 1.0, position: .center)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

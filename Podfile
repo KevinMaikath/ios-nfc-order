@@ -8,4 +8,5 @@ target 'ios-nfc-order' do
   # Pods for ios-nfc-order
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'Toast-Swift', '~> 5.0.1'
 end

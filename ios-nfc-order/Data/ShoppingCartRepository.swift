@@ -59,13 +59,11 @@ class ShoppingCartRepository {
     
     func addOneToCart(_ shopItemIndex: Int) {
         self.cartList?[shopItemIndex].quantity += 1
-        print("ADD QTY: \(self.cartList?[shopItemIndex].quantity ?? 99)")
         self.totalPrice! += (self.cartList?[shopItemIndex].price)!
     }
     
     func removeOneFromCart(_ shopItemIndex: Int) {
         guard let qty = self.cartList?[shopItemIndex].quantity else { return }
-        print("QUANTITY SET TO : \(qty - 1)")
         self.totalPrice! -= (self.cartList?[shopItemIndex].price)!
         if qty <= 1 {
             self.removeProductFromCart(shopItemIndex)
