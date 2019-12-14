@@ -27,6 +27,7 @@ class CategoryViewController: UITableViewController {
     
     let model: CategoryModel = CategoryModel()
     var category: Category?
+    var selectedProduct: Product?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,16 +65,27 @@ class CategoryViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected CELL: \(indexPath.row)")
-    }
-    
     func buttonTapped(_ indexPath: IndexPath) {
         print("Selected BUTTON: \(indexPath.row)")
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedProduct = model.productList?[indexPath.row]
+        
+        performSegue(withIdentifier: "categoryToProductDetailSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "categoryToProductDetailSegue" {
+            let productDetailView = segue.destination as! ProductDetailViewController
+            productDetailView.product = selectedProduct
+            
+
+        }
     }
 
 }
