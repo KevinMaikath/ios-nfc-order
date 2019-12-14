@@ -14,10 +14,12 @@ class Repository {
     private static var INSTANCE: Repository?
     private let CATEGORIES_ROOT_REF = "/categories"
     private var categories: [Category]!
-    
+    private var lastCategoryLoaded = ""
+    private var productList: [Product]!
     
     init(){
         self.categories = []
+        self.productList = []
     }
     
     public static func getInstance() -> Repository{
@@ -47,6 +49,37 @@ class Repository {
             }
         } else {
             completion(self.categories)
+        }
+    }
+    
+    
+    func loadProducts(fromCategory category: Category, completion: @escaping (([Product]) -> Void)) {
+        if (self.lastCategoryLoaded == category.name) {
+            completion(self.productList)
+        } else {
+            self.productList = []
+            for doc in category.items {
+                doc.getDocument { (docSnapshot, error) in
+                    if let err = error {
+                        print("ERROR: \(err)")
+                    } else {
+                        guard let docSnapshot = docSnapshot, docSnapshot.exists else {
+                            print("___________Error while loading document from firebase")
+                            return
+                        }
+                        let data = docSnapshot.data()
+                        let name = data!["name"] as? String ?? ""
+                        let imgUrl = data!["imgUrl"] as? String ?? ""
+                        let ingredients = data!["ingredients"] as? [String] ?? []
+                        let price = data!["price"] as? Float ?? 0
+                    
+                        let product = Product(name: name, imgUrl: imgUrl, price: price,    ingredients: ingredients)
+                        self.productList.append(product)
+                        completion(self.productList)
+                    }
+                }
+            }
+            self.lastCategoryLoaded = category.name
         }
     }
     

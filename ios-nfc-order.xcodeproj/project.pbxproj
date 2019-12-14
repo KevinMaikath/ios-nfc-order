@@ -19,6 +19,8 @@
 		FB72985E23A4011F00805B2B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72985D23A4011F00805B2B /* Repository.swift */; };
 		FB72986023A4013600805B2B /* CatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72985F23A4013600805B2B /* CatalogModel.swift */; };
 		FB72986223A4022700805B2B /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72986123A4022700805B2B /* CatalogViewController.swift */; };
+		FB9E305723A4EB9900DF63AB /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E305623A4EB9900DF63AB /* CategoryViewController.swift */; };
+		FB9E305923A4EBB000DF63AB /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E305823A4EBB000DF63AB /* CategoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		FB72985D23A4011F00805B2B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		FB72985F23A4013600805B2B /* CatalogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModel.swift; sourceTree = "<group>"; };
 		FB72986123A4022700805B2B /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		FB9E305623A4EB9900DF63AB /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		FB9E305823A4EBB000DF63AB /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				FB72986123A4022700805B2B /* CatalogViewController.swift */,
+				FB9E305623A4EB9900DF63AB /* CategoryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				FB72985F23A4013600805B2B /* CatalogModel.swift */,
+				FB9E305823A4EBB000DF63AB /* CategoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -250,8 +256,10 @@
 				FB72985E23A4011F00805B2B /* Repository.swift in Sources */,
 				FB72986023A4013600805B2B /* CatalogModel.swift in Sources */,
 				FB72983F23A3FCFF00805B2B /* AppDelegate.swift in Sources */,
+				FB9E305723A4EB9900DF63AB /* CategoryViewController.swift in Sources */,
 				FB72985A23A3FFB100805B2B /* Product.swift in Sources */,
 				FB72984123A3FCFF00805B2B /* SceneDelegate.swift in Sources */,
+				FB9E305923A4EBB000DF63AB /* CategoryModel.swift in Sources */,
 				FB72985623A3FD6900805B2B /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,7 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinrx25.ios-nfc-order";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -424,7 +432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinrx25.ios-nfc-order";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

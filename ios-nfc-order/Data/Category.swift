@@ -13,6 +13,6 @@ struct Category {
 
     var name: String!
     var imgUrl: String!
-    var items: [DocumentReference]?
+    var items: [DocumentReference]!
     
 }

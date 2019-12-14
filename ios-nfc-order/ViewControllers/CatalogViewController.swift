@@ -36,6 +36,7 @@ class CategoryCell: UITableViewCell {
 class CatalogViewController: UITableViewController {
     
     let model: CatalogModel = CatalogModel()
+    var selectedCategory: Category?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,10 +63,29 @@ class CatalogViewController: UITableViewController {
         
         let category = model.categories![indexPath.row]
         cell.categoryImage.downloadImage(from: URL(string: category.imgUrl)!)
-        //cell.categoryImage.image = UIImage()
         cell.categoryName.text = category.name
         
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCategory = model.categories?[indexPath.row]
+        
+        performSegue(withIdentifier: "catalogToCategorySegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "catalogToCategorySegue" {
+            let categoryView = segue.destination as! CategoryViewController
+            categoryView.category = selectedCategory
+            
+
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
     }
 
 }

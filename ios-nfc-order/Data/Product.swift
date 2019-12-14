@@ -12,6 +12,7 @@ struct Product {
     
     var name: String!
     var imgUrl: String!
+    var price: Float!
     var ingredients: [String]!
     
 }
