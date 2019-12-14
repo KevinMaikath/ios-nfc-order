@@ -11,15 +11,15 @@ import UIKit
 class CatalogModel {
     
     var categories: [Category]?
-    var repository: Repository?
+    var firestoreRepository: FirestoreRepository?
     
     init() {
-        self.repository = Repository.getInstance()
+        self.firestoreRepository = FirestoreRepository.getInstance()
         self.categories = []
     }
 
     func loadCategories(completion: @escaping (() -> Void)){
-        repository?.loadCategories(completion: { (loadedCategories) in
+        firestoreRepository?.loadCategories(completion: { (loadedCategories) in
             self.categories = loadedCategories
             completion()
         })

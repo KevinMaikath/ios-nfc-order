@@ -11,15 +11,15 @@ import UIKit
 class CategoryModel {
 
     var productList: [Product]?
-    var repository: Repository?
+    var firestoreRepository: FirestoreRepository?
  
     init() {
-        self.repository = Repository.getInstance()
+        self.firestoreRepository = FirestoreRepository.getInstance()
         self.productList = []
     }
     
     func loadProductList(fromCategory category: Category, completion: @escaping (() -> Void)){
-        repository?.loadProducts(fromCategory: category, completion: { (loadedProducts) in
+        firestoreRepository?.loadProducts(fromCategory: category, completion: { (loadedProducts) in
             self.productList = loadedProducts
             completion()
         })

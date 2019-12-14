@@ -1,5 +1,5 @@
 //
-//  Repository.swift
+//  FirestoreRepository.swift
 //  ios-nfc-order
 //
 //  Created by alumno on 13/12/2019.
@@ -9,9 +9,9 @@
 import UIKit
 import Firebase
 
-class Repository {
+class FirestoreRepository {
 
-    private static var INSTANCE: Repository?
+    private static var INSTANCE: FirestoreRepository?
     private let CATEGORIES_ROOT_REF = "/categories"
     private var categories: [Category]!
     private var lastCategoryLoaded = ""
@@ -22,9 +22,9 @@ class Repository {
         self.productList = []
     }
     
-    public static func getInstance() -> Repository{
+    public static func getInstance() -> FirestoreRepository{
         if INSTANCE == nil {
-            INSTANCE = Repository()
+            INSTANCE = FirestoreRepository()
         }
         return INSTANCE!
     }
