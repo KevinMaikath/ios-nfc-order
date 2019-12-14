@@ -12,14 +12,18 @@ class ProductDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var navBar: UINavigationItem!
     
+    var shoppingCart: ShoppingCartRepository?
     var product: Product?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.shoppingCart = ShoppingCartRepository.getInstance()
         productPrice.text = "$\(product!.price ?? 0)"
         productImage.downloadImage(from: URL(string: product!.imgUrl)!)
+        navBar.title = product!.name
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,4 +45,7 @@ class ProductDetailViewController: UIViewController, UITableViewDelegate, UITabl
         return cell
     }
     
+    @IBAction func addButtonTapped(_ sender: UIButton) {
+        self.shoppingCart?.addOneToCart(self.product!)
+    }
 }

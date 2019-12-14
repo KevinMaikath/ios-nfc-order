@@ -26,16 +26,17 @@ class CategoryViewController: UITableViewController {
     @IBOutlet weak var navBar: UINavigationItem!
     
     let model: CategoryModel = CategoryModel()
+    var shoppingCart: ShoppingCartRepository?
     var category: Category?
     var selectedProduct: Product?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.shoppingCart = ShoppingCartRepository.getInstance()
         model.loadProductList(fromCategory: category!) {
             self.tableView.reloadData()
         }
-            
         navBar.title = category?.name
     }
 
@@ -66,7 +67,7 @@ class CategoryViewController: UITableViewController {
     }
     
     func buttonTapped(_ indexPath: IndexPath) {
-        print("Selected BUTTON: \(indexPath.row)")
+        self.shoppingCart?.addOneToCart(model.productList![indexPath.row])
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
