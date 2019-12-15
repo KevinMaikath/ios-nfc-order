@@ -92,7 +92,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2wB-5j-LmT">
-                                <rect key="frame" x="15" y="164.5" width="384" height="682.5"/>
+                                <rect key="frame" x="15" y="164.5" width="384" height="592.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="shopItemCell" rowHeight="88" id="5us-51-j28" customClass="ShopItemCell" customModule="ios_nfc_order" customModuleProvider="target">
@@ -138,10 +138,18 @@
                                                         <action selector="addButtonTapped:" destination="5us-51-j28" eventType="touchUpInside" id="GBf-jd-qRh"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVs-Yl-fU1">
+                                                    <rect key="frame" x="190" y="33.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NXz-zt-zxi" firstAttribute="centerY" secondItem="XTp-Tv-3mB" secondAttribute="centerY" id="4iF-tn-AMY"/>
+                                                <constraint firstItem="dVs-Yl-fU1" firstAttribute="centerY" secondItem="XTp-Tv-3mB" secondAttribute="centerY" id="AVa-vV-1Yv"/>
                                                 <constraint firstItem="4yv-oD-o6Z" firstAttribute="leading" secondItem="6Xu-e5-eQ4" secondAttribute="trailing" constant="10" id="Brh-Ya-P2T"/>
+                                                <constraint firstItem="NXz-zt-zxi" firstAttribute="leading" secondItem="dVs-Yl-fU1" secondAttribute="trailing" constant="20" id="C0V-yX-RuQ"/>
                                                 <constraint firstItem="4yv-oD-o6Z" firstAttribute="centerY" secondItem="XTp-Tv-3mB" secondAttribute="centerY" id="J4K-aY-258"/>
                                                 <constraint firstItem="ONg-JC-qON" firstAttribute="centerY" secondItem="XTp-Tv-3mB" secondAttribute="centerY" id="N2g-NR-NaO"/>
                                                 <constraint firstAttribute="trailing" secondItem="4yv-oD-o6Z" secondAttribute="trailing" constant="20" id="TCT-Be-ZV1"/>
@@ -152,6 +160,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="shopItemName" destination="ONg-JC-qON" id="2Hg-SC-VH7"/>
+                                            <outlet property="shopItemPrice" destination="dVs-Yl-fU1" id="Doo-vn-ogi"/>
                                             <outlet property="shopItemQuantity" destination="6Xu-e5-eQ4" id="HEi-EI-fg6"/>
                                         </connections>
                                     </tableViewCell>
@@ -161,12 +170,26 @@
                                     <outlet property="delegate" destination="xQI-P2-7ht" id="jNR-eh-IoU"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgj-zX-pFr">
+                                <rect key="frame" x="304" y="767.5" width="75" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="ElM-g2-rNi"/>
+                                    <constraint firstAttribute="width" constant="75" id="OU4-MP-csC"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" backgroundImage="checkmark.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="xQI-P2-7ht" eventType="touchUpInside" id="QqH-Gl-tle"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hyJ-be-GKO" firstAttribute="trailing" secondItem="2wB-5j-LmT" secondAttribute="trailing" constant="15" id="2dp-D9-fOK"/>
-                            <constraint firstItem="hyJ-be-GKO" firstAttribute="bottom" secondItem="2wB-5j-LmT" secondAttribute="bottom" constant="15" id="T3K-Mx-BOt"/>
+                            <constraint firstItem="hyJ-be-GKO" firstAttribute="trailing" secondItem="zgj-zX-pFr" secondAttribute="trailing" constant="35" id="AuO-MA-2vT"/>
+                            <constraint firstItem="hyJ-be-GKO" firstAttribute="bottom" secondItem="2wB-5j-LmT" secondAttribute="bottom" constant="105" id="T3K-Mx-BOt"/>
                             <constraint firstItem="JDq-pt-FLp" firstAttribute="leading" secondItem="hyJ-be-GKO" secondAttribute="leading" constant="30" id="clx-7Y-odp"/>
+                            <constraint firstItem="hyJ-be-GKO" firstAttribute="bottom" secondItem="zgj-zX-pFr" secondAttribute="bottom" constant="20" id="fI7-FG-Wvq"/>
                             <constraint firstItem="JDq-pt-FLp" firstAttribute="top" secondItem="hyJ-be-GKO" secondAttribute="top" constant="20" id="gve-R5-d4G"/>
                             <constraint firstItem="2wB-5j-LmT" firstAttribute="leading" secondItem="hyJ-be-GKO" secondAttribute="leading" constant="15" id="jCb-k0-CZr"/>
                             <constraint firstItem="WCE-KD-Kfg" firstAttribute="leading" secondItem="JDq-pt-FLp" secondAttribute="trailing" constant="30" id="sjC-D2-NxZ"/>
@@ -367,6 +390,7 @@
     </scenes>
     <resources>
         <image name="cart.fill" catalog="system" width="64" height="50"/>
+        <image name="checkmark.circle.fill" catalog="system" width="64" height="60"/>
         <image name="minus.circle.fill" catalog="system" width="64" height="60"/>
         <image name="plus.app.fill" catalog="system" width="64" height="56"/>
         <image name="plus.circle.fill" catalog="system" width="64" height="60"/>

@@ -14,7 +14,6 @@
 		FB72984823A3FD0000805B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB72984723A3FD0000805B2B /* Assets.xcassets */; };
 		FB72984B23A3FD0000805B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB72984923A3FD0000805B2B /* LaunchScreen.storyboard */; };
 		FB72985623A3FD6900805B2B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72985523A3FD6900805B2B /* Category.swift */; };
-		FB72985823A3FEAD00805B2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB72985723A3FEAD00805B2B /* GoogleService-Info.plist */; };
 		FB72985A23A3FFB100805B2B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72985923A3FFB100805B2B /* Product.swift */; };
 		FB72985E23A4011F00805B2B /* FirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72985D23A4011F00805B2B /* FirestoreRepository.swift */; };
 		FB72986023A4013600805B2B /* CatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72985F23A4013600805B2B /* CatalogModel.swift */; };
@@ -28,6 +27,7 @@
 		FB9E306423A5575100DF63AB /* ProductDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E306323A5575100DF63AB /* ProductDetailModel.swift */; };
 		FB9E306623A55F0500DF63AB /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E306523A55F0500DF63AB /* ShoppingCartViewController.swift */; };
 		FB9E306823A5602100DF63AB /* ShoppingCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E306723A5602100DF63AB /* ShoppingCartModel.swift */; };
+		FBF7552923A64771001471CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBF7552823A64771001471CF /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,6 @@
 		FB72984A23A3FD0000805B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB72984C23A3FD0000805B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB72985523A3FD6900805B2B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		FB72985723A3FEAD00805B2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB72985923A3FFB100805B2B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FB72985D23A4011F00805B2B /* FirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepository.swift; sourceTree = "<group>"; };
 		FB72985F23A4013600805B2B /* CatalogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModel.swift; sourceTree = "<group>"; };
@@ -56,6 +55,8 @@
 		FB9E306323A5575100DF63AB /* ProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModel.swift; sourceTree = "<group>"; };
 		FB9E306523A55F0500DF63AB /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		FB9E306723A5602100DF63AB /* ShoppingCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartModel.swift; sourceTree = "<group>"; };
+		FBF7552823A64771001471CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FBF7552A23A65810001471CF /* ios-nfc-order.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ios-nfc-order.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +109,8 @@
 		FB72983D23A3FCFF00805B2B /* ios-nfc-order */ = {
 			isa = PBXGroup;
 			children = (
-				FB72985723A3FEAD00805B2B /* GoogleService-Info.plist */,
+				FBF7552A23A65810001471CF /* ios-nfc-order.entitlements */,
+				FBF7552823A64771001471CF /* GoogleService-Info.plist */,
 				FB72985423A3FD5100805B2B /* Data */,
 				FB72985323A3FD2200805B2B /* Models */,
 				FB72985223A3FD1500805B2B /* ViewControllers */,
@@ -218,7 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB72984B23A3FD0000805B2B /* LaunchScreen.storyboard in Resources */,
-				FB72985823A3FEAD00805B2B /* GoogleService-Info.plist in Resources */,
+				FBF7552923A64771001471CF /* GoogleService-Info.plist in Resources */,
 				FB72984823A3FD0000805B2B /* Assets.xcassets in Resources */,
 				FB72984623A3FCFF00805B2B /* Main.storyboard in Resources */,
 			);
@@ -433,6 +435,7 @@
 			baseConfigurationReference = 964A9BBBF7DD0515AB67B365 /* Pods-ios-nfc-order.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ios-nfc-order/ios-nfc-order.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ios-nfc-order/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,6 +454,7 @@
 			baseConfigurationReference = 3FD4304492FCE605171CA0C8 /* Pods-ios-nfc-order.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ios-nfc-order/ios-nfc-order.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ios-nfc-order/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
