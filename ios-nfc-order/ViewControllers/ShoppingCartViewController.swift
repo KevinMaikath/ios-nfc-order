@@ -93,7 +93,7 @@ class ShoppingCartViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBAction func doneButtonTapped(_ sender: UIButton) {
         guard nfcSession == nil else { return }
-        nfcSession = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: true)
+        nfcSession = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
         nfcSession?.alertMessage = "Please approach your phone to the NFC tag."
         nfcSession?.begin()
     }
@@ -123,41 +123,27 @@ class ShoppingCartViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
-        //guard
-          //  let ndefMessage = messages.first,
-            //let record = ndefMessage.records.first,
-            //record.typeNameFormat == .nfcWellKnown,
-            //let payloadText = String(data: record.payload, encoding: .utf8)
-           // let sku = payloadText.split(separator: "/").last
-        //else {
-          //  return
-        //}
         
-        for (index, ndefMessage) in messages.enumerated() {
-            guard
-                let record = ndefMessage.records.first,
-                record.typeNameFormat == .nfcWellKnown,
-                let payloadText = String(data: record.payload, encoding: .utf8)
-            else {
-                return
-            }
-            print("REGISTRO: -\(index)- //// DATOS: \(payloadText)")
-        }
+        let payload_4 = messages[0].records[4].payload
+        let payload_text_4 = (String(data: payload_4, encoding: .utf8)!)
+        let documentRef = payload_text_4.dropFirst(3)
         
+        let payload_3 = messages[0].records[3].payload
+        let payload_text_3 = (String(data: payload_3, encoding: .utf8)!)
+        let restaurant_name = payload_text_3.dropFirst(3)
+        
+        self.nfcSession?.invalidate()
         self.nfcSession = nil
         
-        //guard let product = productStore.product(withID: String(sku)) else {
-          //  DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            //    let alertController = UIAlertController(title: "Info", message: "SKU Not found in catalog",preferredStyle: .alert)
-              //  alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                //self?.present(alertController, animated: true, completion: nil)
-            //}
-            //return
-        //}
-        
-       // DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-         //   self?.presentProductViewController(product: product)
-        //}
+        let alertController = UIAlertController(
+                title: "Operation successful!",
+                message: "Your order has been successfully submited to \(restaurant_name)",
+                preferredStyle: .alert
+            )
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            DispatchQueue.main.async {
+                self.present(alertController, animated: true, completion: nil)
+            }
     }
     
 }
