@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ShoppingCartRepository {
 
@@ -71,6 +72,38 @@ class ShoppingCartRepository {
             self.cartList?[shopItemIndex].quantity -= 1
         }
         
+    }
+    
+    func pushDataToFirestore(_ docRef: String, completion: @escaping ((String) -> Void)) {
+        struct Element {
+            var name: String!
+            var quantity: Int!
+        }
+        var elements: [Element] = []
+        
+        for item in cartList! {
+            let elm = Element(name: item.name, quantity: item.quantity)
+            elements.append(elm)
+        }
+        
+        guard let docData: [String: Any] = [
+            "elements": elements,
+            "totalPrice": self.totalPrice
+            ] else {
+                let docData: [String: Any] = [
+                    "error": "error"
+                ]
+        }
+        
+        Firestore.firestore().collection("orders").document(docRef).setData(docData) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+                completion("Error: \(err)")
+            } else {
+                print("Document successfully written!")
+                completion("Success")
+            }
+        }
     }
     
 }

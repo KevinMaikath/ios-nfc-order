@@ -38,4 +38,10 @@ class ShoppingCartModel {
         self.refreshCart()
     }
     
+    func pushDataToFirestore(_ docRef: String, completion: @escaping ((String) -> Void)) {
+        self.shoppingCart!.pushDataToFirestore(docRef, completion: { error in
+            completion(error)
+        })
+    }
+    
 }

@@ -94,6 +94,7 @@ class ShoppingCartViewController: UIViewController, UITableViewDataSource, UITab
     @IBAction func doneButtonTapped(_ sender: UIButton) {
         guard nfcSession == nil else { return }
         nfcSession = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
+//        nfcSession?.invalidate()
         nfcSession?.alertMessage = "Please approach your phone to the NFC tag."
         nfcSession?.begin()
     }
@@ -132,18 +133,35 @@ class ShoppingCartViewController: UIViewController, UITableViewDataSource, UITab
         let payload_text_3 = (String(data: payload_3, encoding: .utf8)!)
         let restaurant_name = payload_text_3.dropFirst(3)
         
+        self.pushDataToFirestore("\(documentRef)", "\(restaurant_name)")
+        
         self.nfcSession?.invalidate()
         self.nfcSession = nil
-        
-        let alertController = UIAlertController(
-                title: "Operation successful!",
-                message: "Your order has been successfully submited to \(restaurant_name)",
-                preferredStyle: .alert
-            )
-            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            DispatchQueue.main.async {
-                self.present(alertController, animated: true, completion: nil)
-            }
     }
+    
+        func pushDataToFirestore(_ docRef: String, _ restaurantName: String){
+            self.model.pushDataToFirestore(docRef) { error in
+                var message: String
+                var title: String
+                if error != "Success" {
+                    title = "Error"
+                    message = error
+                } else {
+                    title = "Operation successful!"
+                    message = "Your order has been successfully submited to \(restaurantName)"
+                }
+    
+                let alertController = UIAlertController(
+                    title: "\(title)",
+                    message: "\(message)",
+                    preferredStyle: .alert
+                )
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                DispatchQueue.main.async {
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+
     
 }
