@@ -75,14 +75,14 @@ class ShoppingCartRepository {
     }
     
     func pushDataToFirestore(_ docRef: String, completion: @escaping ((String) -> Void)) {
-        struct Element {
-            var name: String!
-            var quantity: Int!
-        }
-        var elements: [Element] = []
+        
+        var elements: [[String: Any]] = [[:]]
         
         for item in cartList! {
-            let elm = Element(name: item.name, quantity: item.quantity)
+            let elm: [String: Any] = [
+                "name": item.name,
+                "quantity": item.quantity
+            ]
             elements.append(elm)
         }
         
